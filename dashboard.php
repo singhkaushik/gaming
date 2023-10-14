@@ -6,6 +6,7 @@ if (isset($_SESSION['username'])) {
 	$sql="SELECT * FROM admin where username='$user_id'";
 	$query = mysqli_query($conn,$sql);
 	while ($row = mysqli_fetch_array($query)) {
+    $uid = $row['id'];
 		$username = $row['name'];
 		$useremail = $row['email'];
 	}
@@ -39,7 +40,7 @@ if (isset($_SESSION['username'])) {
                   <h3 class="page-title">Welcome <?php echo $username;?>! </h3>
                   <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="./dashboard.php">Home</a></li>
-                    <li class="breadcrumb-item active">Admin</li>
+                    <li class="breadcrumb-item active">User</li>
                   </ul>
                 </div>
               </div>
@@ -49,22 +50,32 @@ if (isset($_SESSION['username'])) {
           <div class="row">
             <div class="col-xl-6 col-sm-6 col-12 d-flex">
               <div class="card bg-comman w-100">
+                <a href="wallet.php">
                 <div class="card-body">
                   <div
                     class="db-widgets d-flex justify-content-between align-items-center"
                   >
                     <div class="db-info">
-                      <h6>Students</h6>
-                      <h3>50055</h3>
+                      <h6>Wallet</h6>
+                      <?php
+                      $wallet = "SELECT * from wallet where user_id=$uid";
+                      $result_set = mysqli_query($conn,$wallet);
+                      while ($row = mysqli_fetch_array($result_set)){
+                          $total=$row["total"];
+                            }
+                      ?>                  
+                      <h3><?php echo $total;
+                      ?></h3>
                     </div>
                     <div class="db-icon">
                       <img
-                        src="./assets/img/dash-icon-01.svg"
-                        alt="Dashboard Icon"
+                        src="./assets/img/wallet.svg"
+                        alt="Wallet Icon"
                       />
                     </div>
                   </div>
                 </div>
+                </a>
               </div>
             </div>
             <div class="col-xl-6 col-sm-6 col-12 d-flex">
@@ -94,7 +105,7 @@ if (isset($_SESSION['username'])) {
                     class="db-widgets d-flex justify-content-between align-items-center"
                   >
                     <div class="db-info">
-                      <h6>Department</h6>
+                      <h6>Commision</h6>
                       <h3>30+</h3>
                     </div>
                     <div class="db-icon">
@@ -114,7 +125,7 @@ if (isset($_SESSION['username'])) {
                     class="db-widgets d-flex justify-content-between align-items-center"
                   >
                     <div class="db-info">
-                      <h6>Revenue</h6>
+                      <h6>Profit</h6>
                       <h3>$505</h3>
                     </div>
                     <div class="db-icon">
@@ -139,8 +150,8 @@ if (isset($_SESSION['username'])) {
                     </div>
                     <div class="col-6">
                       <ul class="chart-list-out">
-                        <li><span class="circle-blue"></span>Teacher</li>
-                        <li><span class="circle-green"></span>Student</li>
+                        <li><span class="circle-blue"></span>Profit</li>
+                        <li><span class="circle-green"></span>Loss</li>
                         <li class="star-menus">
                           <a href="javascript:;"
                             ><i class="fas fa-ellipsis-v"></i
@@ -260,12 +271,12 @@ if (isset($_SESSION['username'])) {
                 <div class="card-header">
                   <div class="row align-items-center">
                     <div class="col-6">
-                      <h5 class="card-title">Number of Students</h5>
+                      <h5 class="card-title">Number of Matches</h5>
                     </div>
                     <div class="col-6">
                       <ul class="chart-list-out">
-                        <li><span class="circle-blue"></span>Girls</li>
-                        <li><span class="circle-green"></span>Boys</li>
+                        <li><span class="circle-blue"></span>Win</li>
+                        <li><span class="circle-green"></span>Lose</li>
                         <li class="star-menus">
                           <a href="javascript:;"
                             ><i class="fas fa-ellipsis-v"></i
@@ -374,7 +385,7 @@ if (isset($_SESSION['username'])) {
             <div class="col-xl-6 d-flex">
               <div class="card flex-fill student-space comman-shadow">
                 <div class="card-header d-flex align-items-center">
-                  <h5 class="card-title">Star Students</h5>
+                  <h5 class="card-title">Top Winner User</h5>
                   <ul class="chart-list-out student-ellips">
                     <li class="star-menus">
                       <a href="javascript:;"
@@ -392,7 +403,7 @@ if (isset($_SESSION['username'])) {
                         <tr>
                           <th>ID</th>
                           <th>Name</th>
-                          <th class="text-center">Marks</th>
+                          <th class="text-center">Win Matches</th>
                           <th class="text-center">Percentage</th>
                           <th class="text-end">Year</th>
                         </tr>
@@ -415,7 +426,7 @@ if (isset($_SESSION['username'])) {
                               John Smith
                             </a>
                           </td>
-                          <td class="text-center">1185</td>
+                          <td class="text-center">118</td>
                           <td class="text-center">98%</td>
                           <td class="text-end">
                             <div>2019</div>
@@ -438,7 +449,7 @@ if (isset($_SESSION['username'])) {
                               Jolie Hoskins
                             </a>
                           </td>
-                          <td class="text-center">1195</td>
+                          <td class="text-center">119</td>
                           <td class="text-center">99.5%</td>
                           <td class="text-end">
                             <div>2018</div>
@@ -461,7 +472,7 @@ if (isset($_SESSION['username'])) {
                               Pennington Joy
                             </a>
                           </td>
-                          <td class="text-center">1196</td>
+                          <td class="text-center">119</td>
                           <td class="text-center">99.6%</td>
                           <td class="text-end">
                             <div>2017</div>
@@ -484,7 +495,7 @@ if (isset($_SESSION['username'])) {
                               Millie Marsden
                             </a>
                           </td>
-                          <td class="text-center">1187</td>
+                          <td class="text-center">118</td>
                           <td class="text-center">98.2%</td>
                           <td class="text-end">
                             <div>2016</div>
@@ -507,7 +518,7 @@ if (isset($_SESSION['username'])) {
                               John Smith
                             </a>
                           </td>
-                          <td class="text-center">1185</td>
+                          <td class="text-center">118</td>
                           <td class="text-center">98%</td>
                           <td class="text-end">
                             <div>2015</div>
@@ -522,7 +533,7 @@ if (isset($_SESSION['username'])) {
             <div class="col-xl-6 d-flex">
               <div class="card flex-fill comman-shadow">
                 <div class="card-header d-flex align-items-center">
-                  <h5 class="card-title">Student Activity</h5>
+                  <h5 class="card-title">User Mostly Plays</h5>
                   <ul class="chart-list-out student-ellips">
                     <li class="star-menus">
                       <a href="javascript:;"
@@ -562,10 +573,9 @@ if (isset($_SESSION['username'])) {
                         <img src="./assets/img/award-icon-03.svg" alt="Award" />
                       </div>
                       <div class="award-list-outs">
-                        <h4>Internation conference in "St.John School"</h4>
+                        <h4>Internation winner</h4>
                         <h5>
-                          Justin Leeattended internation conference in "St.John
-                          School"
+                          Justin win internation matches
                         </h5>
                       </div>
                       <div class="award-time-list">

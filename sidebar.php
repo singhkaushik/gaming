@@ -43,14 +43,21 @@ if (isset($_SESSION['username'])) {
                 ></a>
                 <ul style="display: block">
                   <li>
-                    <a href="./dashboard.php">Admin Dashboard</a>
+                    <a href="./dashboard.php"> Dashboard</a>
                   </li>
-                 <!--  <li>
-                    <a href="./teacher_dashboard.php">Teacher Dashboard</a>
-                  </li>
-                  <li>
-                    <a href="./student_dashboard.php">Student Dashboard</a>
-                  </li> -->
+                </ul>
+              </li>
+               <li class="submenu">
+                <a href="#"
+                  ><i class="fas fa-book-reader"></i> <span> Wallet</span>
+                  <span class="menu-arrow"></span
+                ></a>
+                <ul>
+                  <li><a href="./exam.php"><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;&nbsp;Wallet</a></li>
+
+                  <li><a href="./all_course.php"><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;&nbsp;Recharge Wallet </a></li>
+                  <li><a href="./all_subject.php"><i class="fa fa-sticky-note" aria-hidden="true"></i>&nbsp;&nbsp;Withdrawal </a></li>
+                  <li><a href="./sub_subject.php"><i class="fa fa-sticky-note" aria-hidden="true"></i>&nbsp;&nbsp;Transactions</a></li>
                 </ul>
               </li>
               <li class="submenu">
@@ -60,12 +67,12 @@ if (isset($_SESSION['username'])) {
                 ></a>
                 <ul>
                   <li><a href="./students.php"><i class="fa fa-list" aria-hidden="true"></i>&nbsp;&nbsp;Student List</a></li>
-                  <!-- <li><a href="./student_details.php">Student View</a></li> -->
+                  <li><a href="./student_details.php">Student View</a></li>
                   <li><a href="#"><i class="fa fa-plus-square" aria-hidden="true"></i>&nbsp;&nbsp;Student Add</a></li>
-                  <!-- <li><a href="./edit_student.php">Student Edit</a></li> -->
+                  <li><a href="./edit_student.php">Student Edit</a></li>
                 </ul>
               </li>
-              <li class="submenu">
+              <!-- <li class="submenu">
                 <a href="#"
                   ><i class="fas fa-chalkboard-teacher"></i>
                   <span> Teachers</span> <span class="menu-arrow"></span
@@ -73,24 +80,8 @@ if (isset($_SESSION['username'])) {
                 <ul>
                   <li><a href="./teachers.php"><i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;&nbsp;Teacher List</a></li>
                   <li><a href="./all_bookedteacher.php"><i class="fa fa-check-circle" aria-hidden="true"></i>&nbsp;&nbsp;All Booked Teachers</a></li>
-                  <!-- <li><a href="./edit_teacher.php">Teacher Edit</a></li> -->
                 </ul>
-              </li>
-              
-               <li class="submenu">
-                <a href="#"
-                  ><i class="fas fa-book-reader"></i> <span> Education</span>
-                  <span class="menu-arrow"></span
-                ></a>
-                <ul>
-                  <li><a href="./exam.php"><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;&nbsp;Examination</a></li>
-
-                  <li><a href="./all_course.php"><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;&nbsp;Courses</a></li>
-                  <li><a href="./all_subject.php"><i class="fa fa-sticky-note" aria-hidden="true"></i>&nbsp;&nbsp;Subject</a></li>
-                  <li><a href="./sub_subject.php"><i class="fa fa-sticky-note" aria-hidden="true"></i>&nbsp;&nbsp;Sub Subject</a></li>
-                  <li><a href="./all_topic.php"><i class="fa fa-pencil-square" aria-hidden="true"></i>&nbsp;&nbsp;Topics</a></li>
-                </ul>
-              </li>
+              </li> -->
 
              <!--  <li class="submenu">
                 <a href="#"

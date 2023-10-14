@@ -33,6 +33,8 @@ if (isset($_POST['register'])) {
     }
 
   }
+} else if (isset($_POST['submit'])) {
+  header("location:login.php");
 }
      ?>
 <!DOCTYPE html>

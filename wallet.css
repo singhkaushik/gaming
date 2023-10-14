@@ -1,0 +1,225 @@
+/* Formating */
+
+.right {
+  width: 220px;
+  position: absolute;
+  background-color: #444445;
+  right: 0px;
+  top: 0px;
+  border-left: 2px solid #5e5e5e;
+}
+
+body {
+  background-color: #292929;
+  color: white;
+}
+
+fieldset {
+  background-color: #444445;
+  border: 2px solid #5e5e5e;
+  margin-right: 225px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+th.management {
+  font-family: arial;
+  font-size: 11pt;
+  width: 20%;
+  border-right: 2px solid #5e5e5e;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+td.management {
+  font-family: arial;
+  font-size: 10pt;
+  width: 20%;
+  border-right: 2px solid #5e5e5e;
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+
+td.managementa {
+  font-family: arial;
+  font-size: 10pt;
+  width: 20%;
+  color: #c9c9c9;
+  border-right: 2px solid #5e5e5e;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+fieldset.cash {
+  height: 60px;
+  padding: 0px;
+  position: relative;
+  top: -15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #2d2d2d;
+}
+
+/* Buttons */
+
+button {
+  width: 85%;
+  height: 50px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-family: arial;
+  font-size: 8pt;
+}
+
+.population {
+  background-color: #3b73c1;
+  color: white;
+  border: 1px solid black;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.population:hover {
+  background-color: #4e81c7;
+}
+
+.population:active {
+  background-color: #3e679f;
+}
+
+.factoryworker {
+  background-color: #c9721a;
+  color: white;
+  border: 1px solid black;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.factoryworker:hover {
+  background-color: #ce8030;
+}
+
+.factoryworker:active {
+  background-color: #a46626;
+}
+
+.factory {
+  background-color: #8c4f12;
+  color: white;
+  border: 1px solid black;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.factory:hover {
+  background-color: #976029;
+}
+
+.factory:active {
+  background-color: #794d20;
+}
+
+.distribution {
+  background-color: #62370c;
+  color: white;
+  border: 1px solid black;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.distribution:hover {
+  background-color: #714b24;
+}
+
+.distribution:active {
+  background-color: #513619;
+}
+
+.house {
+  background-color: #295087;
+  color: white;
+  border: 1px solid black;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.apartment {
+  background-color: #1c385e;
+  color: white;
+  border: 1px solid black;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.employee {
+  background-color: #1da348;
+  color: white;
+  border: 1px solid black;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.store {
+  background-color: #20762e;
+  color: white;
+  border: 1px solid black;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.mall {
+  background-color: #165220;
+  color: white;
+  border: 1px solid black;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.tourguide {
+  background-color: #cd35d6;
+  color: white;
+  border: 1px solid black;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.hotel {
+  background-color: #9a3a9f;
+  color: white;
+  border: 1px solid black;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.monument {
+  background-color: #7b2e7f;
+  color: white;
+  border: 1px solid black;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.loan {
+  height: 25px;
+  color: white;
+  background-color: #383838;
+  position: absolute;
+  top: 116px;
+  right: 255px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.clickpointz {
+  background-color: #19a122;
+}
+
+.clickpointz:hover {
+  background-color: #43b24b;
+}
+
+.clickpointz:active {
+  background-color: #43b24b;
+}
