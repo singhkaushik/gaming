@@ -35,6 +35,7 @@ if (isset($_SESSION['username'])) {
     <link rel="stylesheet" href="./assets/css/flags.css" />
     <link rel="stylesheet" href="./assets/css/fontawesome.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/wallet.css">
   </head>
   <body>
   <div class="wrapper">

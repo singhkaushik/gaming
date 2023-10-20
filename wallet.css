@@ -1,14 +1,5 @@
 /* Formating */
 
-.right {
-  width: 220px;
-  position: absolute;
-  background-color: #444445;
-  right: 0px;
-  top: 0px;
-  border-left: 2px solid #5e5e5e;
-}
-
 body {
   background-color: #292929;
   color: white;
@@ -17,7 +8,7 @@ body {
 fieldset {
   background-color: #444445;
   border: 2px solid #5e5e5e;
-  margin-right: 225px;
+  /* margin-right: 225px; */
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
